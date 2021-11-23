@@ -2,6 +2,10 @@
 indent_style = space
 indent_size = 4
 
+###################################################
+############ Global StyleCop.Analyzers ############
+###################################################
+
 # SA1101: Prefix local calls with this
 dotnet_diagnostic.SA1101.severity = none
 
@@ -11,8 +15,42 @@ dotnet_diagnostic.SA1200.severity = none
 # SA1208: System using directives should be placed before other using directives
 dotnet_diagnostic.SA1208.severity = none
 
+# SA1309: Field names should not begin with underscore
+dotnet_diagnostic.SA1309.severity = none
+
+# SX1309: Field names should begin with underscore
+dotnet_diagnostic.SX1309.severity = warning
+
+# SX1309S: Static field names should begin with underscore
+dotnet_diagnostic.SX1309S.severity = warning
+
 # SA1633: File should have header
 dotnet_diagnostic.SA1633.severity = none
+
+###################################################
+############### Global NETAnalyzers ###############
+###################################################
+
+# CA1014: Mark assemblies with CLSCompliant
+dotnet_diagnostic.CA1014.severity = none
+
+# CA1062: Validate arguments of public methods
+dotnet_diagnostic.CA1062.severity = silent
+
+# CA1822: Mark members as static
+#         Not required for most of scenarios.
+dotnet_diagnostic.CA1822.severity = silent
+
+###################################################
+################### Global IDEs ###################
+###################################################
+
+# IDE0063: Use simple 'using' statement
+dotnet_diagnostic.IDE0063.severity = silent
+
+###################################################
+################# Specific files ##################
+###################################################
 
 [{Startup.cs, Program.cs}]
 # CA1822: Mark members as static
