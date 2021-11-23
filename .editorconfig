@@ -2,6 +2,10 @@
 indent_style = space
 indent_size = 4
 
+###################################################
+############ Global StyleCop.Analyzers ############
+###################################################
+
 # SA1101: Prefix local calls with this
 dotnet_diagnostic.SA1101.severity = none
 
@@ -13,6 +17,18 @@ dotnet_diagnostic.SA1208.severity = none
 
 # SA1633: File should have header
 dotnet_diagnostic.SA1633.severity = none
+
+###################################################
+############### Global NETAnalyzers ###############
+###################################################
+
+# CA1014: Mark assemblies with CLSCompliant
+dotnet_diagnostic.CA1014.severity = none
+
+
+###################################################
+################# Specific files ##################
+###################################################
 
 [{Startup.cs, Program.cs}]
 # CA1822: Mark members as static
