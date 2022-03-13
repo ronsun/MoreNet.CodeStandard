@@ -37,6 +37,9 @@ dotnet_diagnostic.CA1014.severity = none
 # CA1062: Validate arguments of public methods
 dotnet_diagnostic.CA1062.severity = silent
 
+# CA1822: Mark members as static
+#         Not required for most of scenarios.
+dotnet_diagnostic.CA1822.severity = silent
 
 ###################################################
 ################# Specific files ##################
