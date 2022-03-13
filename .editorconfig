@@ -42,6 +42,13 @@ dotnet_diagnostic.CA1062.severity = silent
 dotnet_diagnostic.CA1822.severity = silent
 
 ###################################################
+################### Global IDEs ###################
+###################################################
+
+# IDE0063: Use simple 'using' statement
+dotnet_diagnostic.IDE0063.severity = silent
+
+###################################################
 ################# Specific files ##################
 ###################################################
 
