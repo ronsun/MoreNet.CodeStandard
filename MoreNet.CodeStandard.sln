@@ -1,14 +1,30 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreNet.CodeStandard", "src/MoreNet.CodeStandard/MoreNet.CodeStandard.csproj", "{AA473FD4-1452-4B79-B5FE-33BDF04F62D2}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AF7409C8-6FC6-48C4-BFA9-DE7B7100B1DA}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreNet.CodeStandard", "src\MoreNet.CodeStandard\MoreNet.CodeStandard.csproj", "{1400E824-CF01-4BE4-BD6F-E86EF05E87AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3734BD89-DF9B-48D4-8709-B326F54C4A09}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreNet.CodeStandard.CodeFixes", "src\MoreNet.CodeStandard.CodeFixes\MoreNet.CodeStandard.CodeFixes.csproj", "{243654E9-4800-4DFE-B309-79A1088B5543}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CE12970D-C928-4508-99A1-82ACE6E1E6A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{7972A017-A61E-4C5B-BE71-E9434F1CD90F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreNet.CodeStandard.Test", "tests\MoreNet.CodeStandard.Test\MoreNet.CodeStandard.Test.csproj", "{9F4B233D-B4C7-42CD-8579-95FD30B9F780}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreNet.CodeStandard.Package", "tools\MoreNet.CodeStandard.Package\MoreNet.CodeStandard.Package.csproj", "{EC8BBDAD-02CD-404E-91E7-9F634CD38B0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreNet.CodeStandard.HelperLinks", "src\MoreNet.CodeStandard.HelperLinks\MoreNet.CodeStandard.HelperLinks.csproj", "{F1282E01-4596-4450-A57E-B3CC49FE88CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoreNet.CodeStandard.Vsix", "tools\MoreNet.CodeStandard.Vsix\MoreNet.CodeStandard.Vsix.csproj", "{2C318ED0-DA2F-47B6-B52B-F991E5FF2000}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,13 +32,41 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AA473FD4-1452-4B79-B5FE-33BDF04F62D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA473FD4-1452-4B79-B5FE-33BDF04F62D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA473FD4-1452-4B79-B5FE-33BDF04F62D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA473FD4-1452-4B79-B5FE-33BDF04F62D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1400E824-CF01-4BE4-BD6F-E86EF05E87AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1400E824-CF01-4BE4-BD6F-E86EF05E87AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1400E824-CF01-4BE4-BD6F-E86EF05E87AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1400E824-CF01-4BE4-BD6F-E86EF05E87AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{243654E9-4800-4DFE-B309-79A1088B5543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243654E9-4800-4DFE-B309-79A1088B5543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243654E9-4800-4DFE-B309-79A1088B5543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243654E9-4800-4DFE-B309-79A1088B5543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F4B233D-B4C7-42CD-8579-95FD30B9F780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F4B233D-B4C7-42CD-8579-95FD30B9F780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F4B233D-B4C7-42CD-8579-95FD30B9F780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F4B233D-B4C7-42CD-8579-95FD30B9F780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8BBDAD-02CD-404E-91E7-9F634CD38B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8BBDAD-02CD-404E-91E7-9F634CD38B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8BBDAD-02CD-404E-91E7-9F634CD38B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8BBDAD-02CD-404E-91E7-9F634CD38B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1282E01-4596-4450-A57E-B3CC49FE88CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1282E01-4596-4450-A57E-B3CC49FE88CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1282E01-4596-4450-A57E-B3CC49FE88CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1282E01-4596-4450-A57E-B3CC49FE88CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C318ED0-DA2F-47B6-B52B-F991E5FF2000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C318ED0-DA2F-47B6-B52B-F991E5FF2000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C318ED0-DA2F-47B6-B52B-F991E5FF2000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C318ED0-DA2F-47B6-B52B-F991E5FF2000}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1400E824-CF01-4BE4-BD6F-E86EF05E87AE} = {3734BD89-DF9B-48D4-8709-B326F54C4A09}
+		{243654E9-4800-4DFE-B309-79A1088B5543} = {3734BD89-DF9B-48D4-8709-B326F54C4A09}
+		{9F4B233D-B4C7-42CD-8579-95FD30B9F780} = {CE12970D-C928-4508-99A1-82ACE6E1E6A5}
+		{EC8BBDAD-02CD-404E-91E7-9F634CD38B0B} = {7972A017-A61E-4C5B-BE71-E9434F1CD90F}
+		{F1282E01-4596-4450-A57E-B3CC49FE88CE} = {3734BD89-DF9B-48D4-8709-B326F54C4A09}
+		{2C318ED0-DA2F-47B6-B52B-F991E5FF2000} = {7972A017-A61E-4C5B-BE71-E9434F1CD90F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8C964B6D-9E4E-4624-A2FE-5436777ECD43}

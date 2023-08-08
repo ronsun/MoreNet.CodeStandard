@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>MoreNet.CodeStandard</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MoreNet.CodeStandard\MoreNet.CodeStandard.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MaintainabilityRules\MaintainabilityResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MaintainabilityResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="NamingRules\NamingResources.Designer.cs" DesignTime="True" AutoGen="True" DependentUpon="NamingResources.resx" />
+    <EmbeddedResource Update="MaintainabilityRules\MaintainabilityResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MaintainabilityResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="NamingRules\NamingResources.resx" Generator="ResXFileCodeGenerator" LastGenOutput="NamingResources.Designer.cs" />
+  </ItemGroup>
+
+</Project>

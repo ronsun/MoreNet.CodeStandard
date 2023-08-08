@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <IsPackable>false</IsPackable>
+    <!-- Avoid ID conflicts with the package project. -->
+    <PackageId>*$(MSBuildProjectFile)*</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="2.9.8" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MaintainabilityRules\MaintainabilityResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MaintainabilityResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="NamingRules\NamingResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>NamingResources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="MaintainabilityRules\MaintainabilityResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MaintainabilityResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="NamingRules\NamingResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NamingResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
