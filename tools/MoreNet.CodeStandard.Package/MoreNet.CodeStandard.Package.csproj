@@ -16,7 +16,12 @@
     <RepositoryUrl>https://github.com/ronsun/MoreNet.CodeStandard</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <Description>Code Standards</Description>
-    <PackageReleaseNotes>Summary of changes made in this release of the package.</PackageReleaseNotes>
+    <PackageReleaseNotes>
+      + First batch of rules
+        - MN1300AsyncMethodShouldEndWithAsync
+        - MN1301NonAsyncMethodMustNotEndWithAsync
+        - MN1400PlaceStringInterpolationBeforeVerbatimText
+    </PackageReleaseNotes>
     <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
   </PropertyGroup>
 
