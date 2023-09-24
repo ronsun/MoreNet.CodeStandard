@@ -1,15 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
+  <PropertyGroup Label="basic">
     <TargetFramework>netstandard2.0</TargetFramework>
     <IncludeBuildOutput>false</IncludeBuildOutput>
-    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
   </PropertyGroup>
 
-  <PropertyGroup>
+  <PropertyGroup Label="packingMetadata">
     <PackageId>MoreNet.CodeStandard</PackageId>
     <PackageVersion>1.1.0-local</PackageVersion>
     <Authors>Ron</Authors>
@@ -22,18 +20,19 @@
     <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="dependencies">
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>none</PrivateAssets>
     </PackageReference>
+    <ProjectReference Include="..\..\src\MoreNet.CodeStandard.CodeFixes\MoreNet.CodeStandard.CodeFixes.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\MoreNet.CodeStandard\MoreNet.CodeStandard.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\MoreNet.CodeStandard.CodeFixes\MoreNet.CodeStandard.CodeFixes.csproj" />
-    <ProjectReference Include="..\..\src\MoreNet.CodeStandard\MoreNet.CodeStandard.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
+  <ItemGroup Label="asssets">
     <None Include="..\..\icon.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
@@ -44,7 +43,7 @@
     </None>
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Label="tools">
     <None Update="tools\*.ps1" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="" />
   </ItemGroup>
 
